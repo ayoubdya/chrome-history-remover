@@ -3,9 +3,9 @@ import React, { useState, useEffect } from "react";
 import Box from "@mui/material/Box";
 import BottomNavigation from "@mui/material/BottomNavigation";
 import BottomNavigationAction from "@mui/material/BottomNavigationAction";
-import RestoreIcon from "@mui/icons-material/Restore";
-import FavoriteIcon from "@mui/icons-material/Favorite";
-import LocationOnIcon from "@mui/icons-material/LocationOn";
+
+import ListAltIcon from "@mui/icons-material/ListAlt";
+import AddCircleIcon from "@mui/icons-material/AddCircle";
 
 import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";
@@ -41,12 +41,11 @@ function App() {
             setTabValue(newValue);
           }}
         >
-          <BottomNavigationAction label='Add Current' icon={<RestoreIcon />} />
           <BottomNavigationAction
-            label='Add Manually'
-            icon={<FavoriteIcon />}
+            label='Add Current'
+            icon={<AddCircleIcon />}
           />
-          <BottomNavigationAction label='About Me' icon={<LocationOnIcon />} />
+          <BottomNavigationAction label='Add Manually' icon={<ListAltIcon />} />
         </BottomNavigation>
       </Box>
       <AddUrl value={tabValue} newChange={newChange} />

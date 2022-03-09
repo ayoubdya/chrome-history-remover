@@ -4,7 +4,7 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Stack from "@mui/material/Stack";
 
-import { isBlocked, blockUrl, waitlistUrl, getCurrentUrl } from "../main";
+import { isBlocked, blockUrl, waitlistUrl, getCurrentUrl } from "../utils/main";
 
 function AddUrl(props) {
   const [currentUrl, setCurrentUrl] = useState(null);
@@ -14,16 +14,16 @@ function AddUrl(props) {
     console.log("useEffect addurl");
     getCurrentUrl().then((url) => {
       setCurrentUrl(url);
-      isBlocked(url).then((blocked) => {
-        setChecked(blocked);
+      isBlocked(url).then((isBlocked) => {
+        setChecked(isBlocked);
       });
     });
   }, [props.newChange]);
 
   const onSwitchChange = () => {
-    setChecked(!checked);
     if (!checked) blockUrl(currentUrl);
     else waitlistUrl(currentUrl);
+    setChecked(!checked);
   };
 
   return (

@@ -4,7 +4,7 @@ import Box from "@mui/material/Box";
 import SendIcon from "@mui/icons-material/Send";
 import Button from "@mui/material/Button";
 
-import { getBlockedList, setBlockedList } from "../main";
+import { getBlockedList, setBlockedList } from "../utils/main";
 
 function BlockedList(props) {
   const [blockedText, setBlockedText] = useState("");
@@ -35,6 +35,7 @@ function BlockedList(props) {
           onChange={handleListChange}
         />
         <Button
+          sx={{ mt: 1 }}
           variant='contained'
           endIcon={<SendIcon />}
           onClick={onSubmitList}

@@ -1,16 +1,15 @@
 {
   "manifest_version": 3,
-  "description": "I am just testing dont mind me",
-  "name": "test",
-  "version": "0.1",
+  "description": "Deletes specific URLs in history automatically",
+  "name": "History Remover",
+  "version": "1.0",
   "background": {
     "service_worker": "background.js"
   },
   "permissions": [
     "history",
     "storage",
-    "activeTab", 
-    "scripting"
+    "activeTab"
   ],
   "action": {
     "default_popup": "index.html"
