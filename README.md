@@ -6,7 +6,7 @@
 
 # build
 
-`npm run build`
+`npm run build` or extract `build.zip`
 
 then drop `build` folder into extensions page with developer mode enabled
 
