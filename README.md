@@ -10,6 +10,6 @@
 
 then drop `build` folder into extensions page with developer mode enabled
 
-# NOTES FOR ME
+# Inspired from
 
 https://github.com/fxnoob/browser-extension-boilerplate
